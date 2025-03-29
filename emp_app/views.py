@@ -54,21 +54,21 @@ def add_emp(request):
     else:
         return HttpResponse("An Error Occurred")
 
-def remove_emp(request,emp_id):
-    if emp_id:
-        try:
-            emp_to_be_deleted = Employee.objects.get(id=emp_id)
-            emp_to_be_deleted.delete()
-            return HttpResponse("Emp delted Sucessfully")
-        except:
-            return HttpResponse("An Error Occurred While Deleting")
-    emp = Employee.objects.all()
-    context = {
-        'emps':emp
-    }
-    print(context)
-    return render(request,"remove_emp.html",context)
+def remove_emp(request, emp_id=None):  
+    if emp_id:  
+        try:  
+            emp_to_be_deleted = Employee.objects.get(id=emp_id)  
+            emp_to_be_deleted.delete()  
+            return HttpResponse("Hajurle Chaheko Data Delete Vayo")
+        except Employee.DoesNotExist:  
+            return HttpResponse("Error: Employee does not exist")  
+        except Exception as e:  
+            return HttpResponse(f"An error occurred: {str(e)}")  
 
+    # Render the employee list if no emp_id is provided
+    emp = Employee.objects.all()  
+    context = {'emps': emp}  
+    return render(request, "remove_emp.html", context)  
 def filter_emp(request):
     if request.method=="POST":
         #pathako data lai inherit/Line
@@ -80,9 +80,9 @@ def filter_emp(request):
             #Q dina compulary data Query garna
             emps = emps.filter(Q(first_name__icontains =name) | Q(last_name__icontains = name))#icontains le sabi small big case wala dekhauxa
         if dept:
-            emps = emps.filter(dept__name =dept)
+            emps = emps.filter(Q(dept__name__icontains =dept))
         if role:
-            emps = emps.filter(role__name = role)
+            emps = emps.filter(Q(role__name__icontains = role))
 
         context = {
             "emps" : emps

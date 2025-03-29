@@ -16,36 +16,42 @@
             <!-- First Name -->
             <label for="first_name" class="form-label">First Name</label>
             <input type="text" class="form-control" id="first_name" name="first_name" required>
-      
             <!-- Last Name -->
             <label for="last_name" class="form-label">Last Name</label>
             <input type="text" class="form-control" id="last_name" name="last_name" required>
-      
-            <!-- Department Dropdown -->
-            <label for="dept" class="form-label">Department</label>
-            <select class="form-control" id="dept" name="dept" required>
-                <option value="">Select Department</option>
-                {% for dept in departments %}
-                    <option value="{{ dept.id }}">{{ dept.name }}</option>
-                {% endfor %}
-            </select>
-      
+            
+            <!-- Flex container for department and role -->
+            <div class="d-flex gap-3 mt-3">
+                <!-- Department Dropdown -->
+                <div class="w-50">
+                    <label for="dept" class="form-label">Department</label>
+                    <select class="form-control" id="dept" name="dept" required>
+                        <option value="">Select Department</option>
+                        {% for dept in departments %}
+                            <option value="{{ dept.id }}">{{ dept.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Role Dropdown -->
+                <div class="w-50">
+                    <label for="role" class="form-label">Role</label>
+                    <select class="form-control" id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        {% for r in roles %}
+                            <option value="{{ r.id }}">{{ r.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
             <!-- Salary -->
-            <label for="salary" class="form-label">Salary</label>
+            <label for="salary" class="form-label mt-3">Salary</label>
             <input type="number" class="form-control" id="salary" name="salary" required>
       
             <!-- Bonus -->
             <label for="bonus" class="form-label">Bonus</label>
             <input type="number" class="form-control" id="bonus" name="bonus" required>
-      
-            <!-- Role Dropdown -->
-            <label for="role" class="form-label">Role</label>
-            <select class="form-control" id="role" name="role" required>
-                <option value="">Select Role</option>
-                {% for r in roles %}
-                    <option value="{{ r.id }}">{{ r.name }}</option>
-                {% endfor %}
-            </select>
       
             <!-- Phone -->
             <label for="phone" class="form-label">Phone</label>
