@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#Installed apps ma emp_app add gare matrai tyo add hunx natra django le supprt gardaina
+##Yo chai compulsary step hoo
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
