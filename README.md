@@ -4,27 +4,21 @@
 
 ### **1. Virtual Environment Setup**
 Virtual environment (`venv`) banaunda, Django ra aru dependencies haru ekdam ramrai sanga manage garna milcha. Yo le aru projects sanga conflict hunna.
-
 ```bash
 # Windows ma virtual environment banauna
 python -m venv env
-
 # Mac/Linux ma
 python3 -m venv env
 ```
-
 **Activate garna:**
 ```bash
 # Windows (CMD)
 env\Scripts\activate
-
 # Windows (PowerShell)
 env\Scripts\Activate.ps1
-
 # Mac/Linux
 source env/bin/activate
 ```
-
 Yo vanda pachi **terminal ma (env)** dekhincha, jasko matlab virtual environment chalirako cha.
 
 ### **2. Django Install garne**
@@ -51,6 +45,9 @@ cd office_emp_proj
 python manage.py startapp emp_app
 ```
 Yo `emp_app` chai employee management ko lagi ho.
+
+### **Main Structure**
+![MainFileStructure](https://github.com/user-attachments/assets/707746a8-e53a-4f77-a33d-23d2fe091dff)
 
 ### **5. Django Server Run garne**
 ```bash
@@ -86,5 +83,18 @@ Kaam sakiyepaxi, venv **off** garna:
 deactivate
 ```
 Esari garera Django project suru garna milcha! 🎯 🚀
-
 Aba kei confusion xa vane sodhna sakxau! 😃
+
+## Application Screenshots
+
+### Main Page
+![TheMainPage](https://github.com/user-attachments/assets/8ac784e5-a55a-42f6-9c35-458bdeada7a5)
+
+### View All Employees
+![ViewAllEmployees](https://github.com/user-attachments/assets/12e86299-3386-4a88-a340-5b6fc48c9553)
+
+### Remove Employee
+![RemoveEmployeeFromList](https://github.com/user-attachments/assets/694276a6-af03-4657-b3e9-8c716c8ca551)
+
+### Filtering Employees
+![FilterEmployeeByString](https://github.com/user-attachments/assets/13d633dd-7562-4bbd-bfa0-21614f91e92c)
