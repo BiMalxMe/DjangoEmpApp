@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+
+#Yo chai main Project Ko urls.py bhanne wala file ho
+#  Yp office_emp_proj chai main company vayeko va emp_app chai yesko euta sector ho
+
+#path localhost:8000/admin vayo bhanee admin panel lai redirect garxa
+#include le emp_app bhanew sector ko urls lai pani enlist garxa
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('emp_app.urls')),
