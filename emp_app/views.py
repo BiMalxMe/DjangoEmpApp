@@ -41,13 +41,20 @@ def add_emp(request):
     else:
         return HttpResponse("An Error Occurred")
 
-def remove_emp(request):
+def remove_emp(request,emp_id):
+    if emp_id:
+        try:
+            emp_to_be_deleted = Employee.objects.get(id=emp_id)
+            emp_to_be_deleted.delete()
+            return HttpResponse("Emp delted Sucessfully")
+        except:
+            return HttpResponse("An Error Occurred While Deleting")
     emp = Employee.objects.all()
     context = {
         'emps':emp
     }
     print(context)
-    return render(request,"remove_emp.html")
+    return render(request,"remove_emp.html",context)
 
 def filter_emp(request):
     return render(request,"filter_emp.html")
