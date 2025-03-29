@@ -9,6 +9,45 @@
   <body>
     <div class="container">
         <h1>Add  Emp</h1><hr>
+        <form method="POST" action="/add_emp">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+            <!-- First Name -->
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ first_name }}" required>
+        
+            <!-- Last Name -->
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ last_name }}" required>
+        
+            <!-- Department -->
+            <label for="dept" class="form-label">Department</label>
+            <input type="text" class="form-control" id="dept" name="dept" value="{{ dept }}" required>
+        
+            <!-- Salary -->
+            <label for="salary" class="form-label">Salary</label>
+            <input type="number" class="form-control" id="salary" name="salary" value="{{ salary }}" required>
+        
+            <!-- Bonus -->
+            <label for="bonus" class="form-label">Bonus</label>
+            <input type="number" class="form-control" id="bonus" name="bonus" value="{{ bonus }}" required>
+        
+            <!-- Role -->
+            <label for="role" class="form-label">Role</label>
+            <input type="text" class="form-control" id="role" name="role" value="{{ role }}" required>
+        
+            <!-- Phone -->
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="{{ phone }}" required>
+        
+          </div>
+        
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
