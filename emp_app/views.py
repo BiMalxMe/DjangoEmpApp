@@ -5,14 +5,14 @@ from django.shortcuts import render
 def index(request):
     return render(request,"index.html")
 
-def all_emp(request):
-    return render(request,"view_all_emp")
+def view_all_emp(request):
+    return render(request,"view_all_emp.html")
 
 def add_emp(request):
-    return render(request,"add_emp")
+    return render(request,"add_emp.html")
 
 def remove_emp(request):
-    return render(request,"remove_emp")
+    return render(request,"remove_emp.html")
 
 def filter_emp(request):
-    return render(request,"filter_emp")
+    return render(request,"filter_emp.html")
