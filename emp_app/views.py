@@ -14,6 +14,7 @@ def view_all_emp(request):
     }
     print(context)
     return render(request,"view_all_emp.html",context)
+
 def add_emp(request):
     if request.method == "POST":
         first_name = request.POST['first_name']
@@ -41,6 +42,11 @@ def add_emp(request):
         return HttpResponse("An Error Occurred")
 
 def remove_emp(request):
+    emp = Employee.objects.all()
+    context = {
+        'emps':emp
+    }
+    print(context)
     return render(request,"remove_emp.html")
 
 def filter_emp(request):
