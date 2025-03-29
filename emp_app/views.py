@@ -31,6 +31,8 @@ def add_emp(request):
         new_emp = Employee(
             first_name=first_name,
             last_name=last_name,
+            #Aako data(dept_id) lai yesle connect garxa jasle garda tyo id vako location
+            # and department name automatically add hunx
             dept_id=dept,
             salary=salary,
             bonus=bonus,
