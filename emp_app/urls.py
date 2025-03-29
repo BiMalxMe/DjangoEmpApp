@@ -18,6 +18,11 @@ from django.contrib import admin
 from django.urls import path,include
 from . import views
 
+
+#yesma hamle views.py ma vako function lai evoke garna sakhxau 
+# suru ko argument le chai / paxi k vaye kata redirect garne sambhandi
+# janakari rakhxa
+
 urlpatterns = [
     path('', views.index, name="index"),
     path('view_all_emp', views.view_all_emp, name="view_all_emp"),#the string youwrite in the name canbe used in href as {% url 'view_all_emp' %}
