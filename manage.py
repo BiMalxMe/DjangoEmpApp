@@ -5,6 +5,9 @@ import sys
 
 
 def main():
+
+# Yo chai main thau hoo project file structure ma
+#yesle office_emp_proj bhanne company(Maneko).settings lai redirect garxa
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'office_emp_proj.settings')
     try:
