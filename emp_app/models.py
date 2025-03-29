@@ -21,6 +21,11 @@ class Employee(models.Model):
     dept = models.ForeignKey(Department, on_delete=models.CASCADE)
     salary = models.IntegerField(default=0)
     bonus = models.IntegerField(default=0)
+#   On delete CASCADE le chai data delte vayo bhane automatically aru data pani delete garx
+# In     role = models.ForeignKey(Role, on_delete=models.CASCADE)
+#   ROle le yeha foreign key denote gareko xa
+#   aba Role ko data delete vayo bhane automatically ROle sanga connect vako employee ko data 
+# pani delete hunx
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
     phone = models.IntegerField(default=0)
     hire_date = models.DateField()
