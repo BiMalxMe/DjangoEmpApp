@@ -19,9 +19,9 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path('', views.index, name="index")
-    path('', views.all_emp, name="all_emp")
-    path('', views.add_emp, name="add_emp")
-    path('', views.remove_emp, name="remove_emp")
+    path('', views.index, name="index"),
+    path('', views.all_emp, name="all_emp"),
+    path('', views.add_emp, name="add_emp"),
+    path('', views.remove_emp, name="remove_emp"),
     path('', views.filter_emp, name="filter_emp")
 ]
